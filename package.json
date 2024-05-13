@@ -19,7 +19,7 @@
     "android >= 4",
     "bb >= 10"
   ],
-  "author": "reem@42.solutions",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.24.0",
