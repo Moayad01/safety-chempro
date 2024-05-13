@@ -1,0 +1,134 @@
+
+.contact-us-first-container{
+
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: url('../../imgs/contact_us/background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+
+    .content-container{
+
+        position: relative;
+        padding: 0;
+        padding-block-start: 95px;
+        padding-inline: 60px;
+
+        .text-container{
+
+            padding-inline-start: 45px;
+            margin-block-start: 90px;
+            width: 46%;
+
+            .main-text{
+                color: #FFAA40;
+                font-family: Poppins;
+                font-size: 45px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 170%; /* 76.5px */
+            }
+        
+        
+            .secondary{
+                
+                .first-part{
+                    color: #FFF;
+                    font-family: Poppins;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 189.5%;
+                }
+                .second-part{
+                    color: #FFAA40;
+                    font-family: Poppins;
+                    font-size: 31px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 189.5%;
+                }
+            }
+        }
+
+        .map-img{
+            width: 50%;
+            margin-inline-start: auto;
+        }
+
+    }
+
+    .contact-info-container{
+        display: flex;
+        padding-inline: 60px;
+
+        .social-media{
+            padding-inline-start: 31px;
+            .main-text{
+                color: #FFF;
+                font-family: Poppins;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 189.5%; /* 30.32px */
+                padding-inline-start: 14px;
+                margin-block-end: 7px !important;
+            }
+        }
+
+        .spreading-lines{
+            height: auto;
+            width: 2px;
+            background: #C2C2C2;
+            margin-inline: 10%;
+        }
+
+        .phone{
+            .phone-number-text{
+                margin: 0;
+                margin-inline-start: 10px;
+                color: #FFF;
+                font-family: Poppins;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+        }
+
+        .location{
+            
+            .location-text{
+                text-align: left;
+                color: #FFF !important;
+                font-family: Poppins;
+                font-size: 20px;
+                font-style: normal;
+                line-height: normal;
+                text-decoration: none;
+                margin-inline-start: 15px;
+
+                .first{
+                    margin: 0;   
+                    font-size: 16px;
+                }
+
+                .second{
+                    margin: 0;
+                    font-weight: 700;
+                }
+            }
+            
+
+        }
+
+    }
+
+    
+
+}

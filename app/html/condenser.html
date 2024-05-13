@@ -1,0 +1,536 @@
+<!-- @@master  = templates/template_home.html { "body_class" : "" } -->
+
+<!-- @@block  =   template-content -->
+
+<!-- this is styled in units.scss for all units pages  -->
+  
+
+<div class="condenser-frist-container">
+    <div class="main-text-container">
+      <div class="text-container">
+        <span class="first-part">Welcome to... &nbsp; </span>
+        <span class="second-part"> our... <br> Condenser unit</span>
+      </div>
+    </div>
+</div>
+
+
+
+<div class="condenser-main-content-container">
+
+    <p class="header-1 first">Condenser safety equations</p>
+    <p class="header-2 ">Pressure Drop Calculation:</p>
+
+    <div class="centring-container">
+      <div class="furmela-container">
+          <img class="furmela-img" src="../imgs/units/condenser/Pressure-Drop-Calculation.png" alt="">
+      </div>
+    </div>
+
+
+    <ul>
+      <li class="header-3">μ: the fluid viscosity.</li>
+      <li class="header-3">L: the length of the condenser.</li>
+      <li class="header-3">Q: the volumetric flow rate.</li>
+      <li class="header-3">r: is the radius of the tube.</li>
+    </ul>
+
+
+  <p class="header-2 p-t-30">Heat Transfer Equation:( to calculate The heat transfer rate (ΔQ) in the condenser):</p>
+
+
+  <div class="centring-container">
+    <div class="furmela-container">
+        <img class="furmela-img" src="../imgs/units/condenser/Condensation-Rate-Equation.png" alt="">
+    </div>
+  </div>
+
+  <ul>
+    <li class="header-3">ṁ: kg/s</li>
+    <li class="header-3">Q: W </li>
+    <li class="header-3">h_fg: J/kg </li>
+  </ul>
+
+
+
+  <p class="header-2 p-t-30">Boiling Point Elevation:( to Calculates the boiling point elevation for non-ideal solutions within the condenser):</p>
+
+
+  <div class="centring-container">
+    <div class="furmela-container">
+        <img class="furmela-img" src="../imgs/units/condenser/Boiling-Point-Elevation.png" alt="">
+    </div>
+  </div>
+
+  <ul>
+    <li class="header-3">ΔTb: °C </li>
+    <li class="header-3">Kb: °C/kg </li>
+    <li class="header-3">m: kg</li>
+  </ul>
+
+
+  <p class="header-1 p-t-60">equations used for design and operation of condensers:</p>
+
+
+  <p class="header-2 p-t-30">Fouling Factor Adjustment(the new value of U (overall heat transfer coefficient) within the effect of fouling):</p>
+
+
+  <div class="centring-container">
+    <div class="furmela-container">
+        <img class="furmela-img" src="../imgs/units/condenser/Fouling-Factor-Adjustment.png" alt="">
+    </div>
+  </div>
+
+  <ul>
+    <li class="header-3">U: the initial overall heat transfer coefficient.</li>
+    <li class="header-3">R_f: the fouling resistance.</li>
+  </ul>
+
+
+  <p class="header-2 p-t-30">Reynolds Number ( to know the type of flow laminar or turbulent ):</p>
+
+
+  <div class="centring-container">
+    <div class="furmela-container">
+        <img class="furmela-img" src="../imgs/units/condenser/Reynolds-Number.png" alt="">
+    </div>
+  </div>
+
+  <ul>
+    <li class="header-3">D: the hydraulic diameter of the pipe.</li>
+    <li class="header-3">v: the velocity of the fluid.</li>
+    <li class="header-3">ρ: the density of the fluid.</li>
+    <li class="header-3">μ: the dynamic viscosity of the fluid.</li>
+  </ul>
+
+
+
+
+
+  <p class="header-1 p-t-60">Condenser vibration equations:</p>
+
+
+  <p class="header-2 p-t-30"> The motion of a condenser tube subjected to internal fluid flow:</p>
+
+
+  <div class="centring-container">
+    <div class="furmela-container">
+        <img class="furmela-img" src="../imgs/units/condenser/motion-of-a-condenser.png" alt="">
+    </div>
+  </div>
+
+  <ul>
+    <li class="header-3">m : the mass per unit length (kg).</li>
+    <li class="header-3">x ̈ :the acceleration (m/s²).</li>
+    <li class="header-3">x : the displacement of the tube(m)</li>
+    <li class="header-3">x ̇ : the velocity (m/s)</li>
+    <li class="header-3">c : the damping coefficient per unit length(N·s/m).</li>
+    <li class="header-3">k: the stiffness per unit length (N/m).</li>
+    <li class="header-3">p(l,t)  : the pressure distribution within the tube to fluid flow (pa).</li>
+    <li class="header-3">x ̈ :the acceleration (m/s²).</li>
+    <li class="header-3">L : the length of the tube over which the applied force (m).</li>
+  </ul>
+
+
+  <p class="header-2 p-t-30">Fluid forces on the condenser tubes:</p>
+
+
+  <div class="centring-container">
+    <div class="furmela-container">
+        <img class="furmela-img" src="../imgs/units/condenser/Fluid-forces.png" alt="">
+    </div>
+  </div>
+
+  <ul>
+    <li class="header-3">F fluid: the total fluid force (N).</li>
+    <li class="header-3">N: the number of modes considered.</li>
+    <li class="header-3">C(L,n): the lift coefficient for each vortex shedding mode.</li>
+    <li class="header-3">ρ : the fluid density( kg/m³).</li>
+    <li class="header-3">An: the cross-sectional area influenced by the nth mode.</li>
+    <li class="header-3">Vn :the flow velocity for the nth mode (m/s).</li>
+  </ul>
+  
+  
+  
+  <p class="header-2 p-t-30">Finite Element Method for Stress Analysis:</p>
+
+
+  <div class="centring-container">
+    <div class="furmela-container">
+        <img class="furmela-img" src="../imgs/units/condenser/Stress-Analysis.png" alt="">
+    </div>
+  </div>
+
+  <ul>
+    <li class="header-3">σ  the stress (pa).</li>
+    <li class="header-3">E: the modulus of elasticity (pa).</li>
+    <li class="header-3">ϵ : the strain.</li>
+  </ul>
+
+
+
+  <p class="header-1 p-t-60">Comparing different types of condensers in order to choose the suitable one  for your system:</p>
+
+
+    <p class="header-2 p-t-30">Air-Cooled Condenser:</p>
+    <ul class="feature-title">
+        <li class="header-3">Description:</li>
+    </ul>
+    <p class="feature">- Uses air to remove heat by blowing it over the condenser coils with fans.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Common Applications:</li>
+    </ul>
+    <p class="feature">- HVAC systems, small refrigeration units.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Advantages:</li>
+    </ul>
+    <p class="feature">- No water usage, simpler maintenance, good for areas with water shortages.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Disadvantages:</li>
+    </ul>
+    <p class="feature">- Less efficient in hot climates, larger footprint for large scale applications.</p>
+
+
+
+
+    <p class="header-2 p-t-30">Water-Cooled Condenser:</p>
+    <ul class="feature-title">
+        <li class="header-3">Description:</li>
+    </ul>
+    <p class="feature">- Uses water to remove heat, typically involves a cooling tower. Water circulates through coils or panels to absorb heat.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Common Applications:</li>
+    </ul>
+    <p class="feature">- Large industrial applications, power plants.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Advantages:</li>
+    </ul>
+    <p class="feature">- More efficient than air-cooled in heat removal, better for constant load applications.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Disadvantages:</li>
+    </ul>
+    <p class="feature">- Requires water, higher maintenance due to potential for scale and corrosion.</p>
+
+
+
+    <p class="header-2 p-t-30">Evaporative Condenser:</p>
+    <ul class="feature-title">
+        <li class="header-3">Description:</li>
+    </ul>
+    <p class="feature">- Combines water and air cooling, where water is sprayed over the coils and air is blown through to evaporate the water, enhancing heat removal.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Common Applications:</li>
+    </ul>
+    <p class="feature">- Industrial cooling, large AC systems.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Advantages:</li>
+    </ul>
+    <p class="feature">- Higher efficiency than air-cooled, less water usage than water-cooled.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Disadvantages:</li>
+    </ul>
+    <p class="feature">- Requires water treatment, potential for microbial growth, higher initial cost.</p>
+
+
+
+
+    <p class="header-2 p-t-30">Shell and Tube Condenser:</p>
+    <ul class="feature-title">
+        <li class="header-3">Description:</li>
+    </ul>
+    <p class="feature">- Consists of multiple tubes through which the refrigerant flows; water flows over the tubes in the shell to remove heat.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Common Applications:</li>
+    </ul>
+    <p class="feature">- Chemical plants, oil refineries.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Advantages:</li>
+    </ul>
+    <p class="feature">- High durability, can handle large capacities, suitable for high-pressure applications.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Disadvantages:</li>
+    </ul>
+    <p class="feature">- Bulky, expensive, requires significant maintenance.</p>
+
+
+
+
+    <p class="header-2 p-t-30">Plate Condenser:</p>
+    <ul class="feature-title">
+        <li class="header-3">Description:</li>
+    </ul>
+    <p class="feature">-  Made of parallel plates that are thinner than tubes, enhancing the heat transfer efficiency.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Common Applications:</li>
+    </ul>
+    <p class="feature">- Food processing, pharmaceuticals.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Advantages:</li>
+    </ul>
+    <p class="feature">- Compact design, high heat transfer efficiency, less refrigerant required.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Disadvantages:</li>
+    </ul>
+    <p class="feature">- Not suitable for very high-pressure applications, can be difficult to clean.</p>
+
+
+
+
+
+    <p class="header-1 p-t-60 first">Condenser Hazards and safety:</p>
+
+
+    <ul class="feature-title">
+        <li class="header-3">Hazard Category:</li>
+    </ul>
+    <p class="feature">- Chemical.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Specific Hazards:</li>
+    </ul>
+    <p class="feature">- Refrigerant Leaks: Toxic, flammable, or environmentally harmful refrigerants can leak.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Safety Measures:</li>
+    </ul>
+    <p class="feature">- Regular inspection and immediate repair of leaks. Use environmentally friendly refrigerants where possible.</p>
+
+    <div class="centring-container"><div class="h-separator"></div></div>
+
+    <ul class="feature-title">
+        <li class="header-3">Hazard Category:</li>
+    </ul>
+    <p class="feature">- Chemical.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Specific Hazards:</li>
+    </ul>
+    <p class="feature">- Corrosion: Corrosive fluids or environments degrade materials.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Safety Measures:</li>
+    </ul>
+    <p class="feature">- Use corrosion-resistant materials and protective coatings. Regular checks for signs of corrosion.</p>
+
+    
+
+
+    <div class="centring-container"><div class="h-separator"></div></div>
+
+    <ul class="feature-title">
+        <li class="header-3">Hazard Category:</li>
+    </ul>
+    <p class="feature">- Physical.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Specific Hazards:</li>
+    </ul>
+    <p class="feature">- Overpressure: Pressure exceeding design limits can cause explosions.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Safety Measures:</li>
+    </ul>
+    <p class="feature">- Install and maintain pressure relief devices. Regular system pressure checks.</p>
+
+    
+
+
+    <div class="centring-container"><div class="h-separator"></div></div>
+
+    <ul class="feature-title">
+        <li class="header-3">Hazard Category:</li>
+    </ul>
+    <p class="feature">- Physical.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Specific Hazards:</li>
+    </ul>
+    <p class="feature">- Temperature Extremes: High or low operating temperatures pose burn risks or structural issues.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Safety Measures:</li>
+    </ul>
+    <p class="feature">- Proper insulation, safety signage, and personnel training on handling procedures.</p>
+
+    
+
+
+
+    <div class="centring-container"><div class="h-separator"></div></div>
+
+    <ul class="feature-title">
+        <li class="header-3">Hazard Category:</li>
+    </ul>
+    <p class="feature">- Mechanical.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Specific Hazards:</li>
+    </ul>
+    <p class="feature">- Vibration: Excessive vibration can lead to wear and mechanical failure.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Safety Measures:</li>
+    </ul>
+    <p class="feature">- Ensure proper installation and periodic checks. Use vibration dampeners if necessary.</p>
+
+
+
+
+    <div class="centring-container"><div class="h-separator"></div></div>
+
+    <ul class="feature-title">
+        <li class="header-3">Hazard Category:</li>
+    </ul>
+    <p class="feature">- Mechanical.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Specific Hazards:</li>
+    </ul>
+    <p class="feature">- Structural Failure: Failure of condenser structure or supports.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Safety Measures:</li>
+    </ul>
+    <p class="feature">- Regular structural integrity inspections and maintenance.</p>
+
+
+
+    
+
+
+    <div class="centring-container"><div class="h-separator"></div></div>
+
+    <ul class="feature-title">
+        <li class="header-3">Hazard Category:</li>
+    </ul>
+    <p class="feature">- Environmental.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Specific Hazards:</li>
+    </ul>
+    <p class="feature">- Water Contamination: Leaks or discharges can contaminate local water sources.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Safety Measures:</li>
+    </ul>
+    <p class="feature">- Monitor and maintain water treatment systems. Regular checks for leaks.</p>
+
+
+
+
+    <div class="centring-container"><div class="h-separator"></div></div>
+
+    <ul class="feature-title">
+        <li class="header-3">Hazard Category:</li>
+    </ul>
+    <p class="feature">- Environmental.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Specific Hazards:</li>
+    </ul>
+    <p class="feature">- Noise Pollution: Significant noise generation.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Safety Measures:</li>
+    </ul>
+    <p class="feature">- Implement noise control measures and provide hearing protection.</p>
+
+
+
+
+    <div class="centring-container"><div class="h-separator"></div></div>
+
+    <ul class="feature-title">
+        <li class="header-3">Hazard Category:</li>
+    </ul>
+    <p class="feature">- Electrical.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Specific Hazards:</li>
+    </ul>
+    <p class="feature">- Electrocution: Risks from improper handling, faulty wiring, or component failure.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Safety Measures:</li>
+    </ul>
+    <p class="feature">- Regular electrical inspections and ensuring all personnel are trained on electrical safety.</p>
+
+
+
+
+    <div class="centring-container"><div class="h-separator"></div></div>
+
+    <ul class="feature-title">
+        <li class="header-3">Hazard Category:</li>
+    </ul>
+    <p class="feature">- Operational.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Specific Hazards:</li>
+    </ul>
+    <p class="feature">- Improper Operation: Errors in operation due to human error or malfunctioning controls.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Safety Measures:</li>
+    </ul>
+    <p class="feature">- Training for operators, routine checks on control systems.</p>
+
+
+    <div class="centring-container"><div class="h-separator"></div></div>
+
+    <ul class="feature-title">
+        <li class="header-3">Hazard Category:</li>
+    </ul>
+    <p class="feature">- Operational.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Specific Hazards:</li>
+    </ul>
+    <p class="feature">- Maintenance Issues: Poor maintenance leads to increased risk of failure and accidents.</p>
+
+    <ul class="feature-title">
+        <li class="header-3">Safety Measures:</li>
+    </ul>
+    <p class="feature">- Implement a scheduled maintenance program and train maintenance staff appropriately.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ </div>
+
+
+
+
+
+
+
+
+<!-- @@close-->

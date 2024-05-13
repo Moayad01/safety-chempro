@@ -1,0 +1,190 @@
+$search-bg: #374a5f; // Dark slate gray for the search background
+$btn-color: #061117; // Very dark (almost black) blue for the button
+$question-bg: #294657; // Dark slate blue for the question background
+$font-color: #4f5e73; // Lighter slate gray for the font
+
+.post_first_contriner {
+    background: #002237;
+    font-family: 'Arial', sans-serif;
+    border: none;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    min-height: 100vh;
+    padding-top: 130px;
+    position: relative;
+
+    .search-question-boxes {
+
+        margin-block-end: 60px;
+        position: relative;
+
+        .input-title {
+            color: #FFF;
+            font-family: Poppins;
+            font-size: 23px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-block-end: 10px;
+        }
+
+        .search-new-question-inputs {
+            border-radius: 29.257px;
+            background: linear-gradient(100deg, rgba(0, 0, 0, 0.10) 0%, rgba(255, 255, 255, 0.20) 100%);
+            box-shadow: 0px 0px 97.959px 16.142px #8BD2EB;
+            width: 63vw;
+            height: 60px;
+            color: white;
+            padding-inline-start: 14px;
+            font-size: 19px;
+        }
+
+        .input-button {
+            position: absolute;
+            background-color: transparent;
+            right: 11px;
+            top: 51px;
+            padding: 0;
+            margin: 0;
+            border: none;
+
+            .button-icon {
+                height: 46px;
+
+            }
+        }
+
+
+    }
+
+
+    .search-box,
+    .new-question,
+    .answer {
+        display: flex;
+        margin-bottom: 10px;
+
+        input {
+
+
+            &::placeholder {
+                color: $font-color;
+            }
+        }
+
+        button {
+            padding: 0;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+    .discussion {
+        background: linear-gradient(100deg, rgba(0, 0, 0, 0.10) 0%, rgba(255, 255, 255, 0.20) 100%);
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: 0px 4px 97px 16px #9AE1FC, 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(20px);
+        width: 63vw;
+
+        color: #FFF !important;
+        font-family: Poppins;
+        font-size: 23px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-block-end: 75px;
+
+        .question {
+            // background-color: darken($question-bg, 5%);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            // The content styling goes here
+            color: #FFF !important;
+            font-family: Poppins;
+            font-size: 23px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .response {
+            background-color: darken($question-bg, 5%);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            // The content styling goes here
+            color: #FFF !important;
+            font-family: Poppins;
+            font-size: 23px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .answer {
+            // background-color: darken($question-bg, 5%);
+            color: #FFF !important;
+            font-family: Poppins;
+            font-size: 23px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+
+            .post-comment-input {
+
+                border-radius: 29.257px;
+                background: linear-gradient(100deg, rgba(0, 0, 0, 0.10) 0%, rgba(255, 255, 255, 0.20) 100%);
+                box-shadow: 0px 0px 97.959px 16.142px #8BD2EB;
+                width: 63vw;
+                height: 60px;
+                color: white;
+                padding-inline-start: 14px;
+                font-size: 19px;
+
+                &::placeholder {
+                    color: $font-color;
+                }
+            }
+
+            .post-comment-button {
+
+                position: absolute;
+                background-color: transparent;
+                right: 29px;
+                bottom: 35px;
+                padding: 0;
+                margin: 0;
+                border: none;
+
+            }
+
+            .response-button {
+                position: absolute;
+                background-color: transparent;
+                right: 11px;
+                // top: 20px;
+                padding: 0;
+                margin: 0;
+                border: none;
+
+                .response-icon {
+                    height: 46px;
+
+                }
+            }
+
+        }
+
+
+
+
+    }
+}

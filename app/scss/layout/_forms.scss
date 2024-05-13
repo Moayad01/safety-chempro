@@ -1,0 +1,165 @@
+
+
+// these styles related to the sign in and sign up pages
+.sign_up_in_main_container{
+
+    .heading {
+        color: #000;
+        font-family: 'Poppins', sans-serif;
+        font-size: 52px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 52.4px;
+        margin-bottom: 0;
+        
+        @media (max-width: 500px) {
+          font-size: 46px;
+        }
+        @media (max-width: 455px) {
+          font-size: 43px;
+        }
+        @media (max-width: 400px) {
+          font-size: 39px;
+        }
+      }
+    
+      .sub-heading {
+        color: rgba(43, 43, 43, 0.50);
+        font-family: 'Raleway', sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 27px;
+        margin-bottom: 15px;
+
+        @media (max-width: 500px) {
+          font-size: 15px;
+        }
+        @media (max-width: 455px) {
+          font-size: 14px;
+        }
+        @media (max-width: 400px) {
+          font-size: 12px;
+        }
+
+        
+
+        &.sign_in{
+            margin-block-end: 35.5px;
+            @media (max-width: 1100px) {
+              margin-block-end: 11.5px;
+            }
+        }
+
+
+
+
+      }
+
+      form{
+
+        width: 48%;
+
+        @media (max-width: 1440px) {
+          width: 55%;
+        }
+        @media (max-width: 1100px) {
+          width: 66%;
+        }
+        @media (max-width: 1000px) {
+          width: 64%;
+        }
+        @media (max-width: 780px) {
+          width: 70%;
+        }
+        @media (max-width: 500px) {
+          width: 82%;
+          
+        }
+
+        .name-continer{
+            width: 47.5%;
+
+            &.first{
+                margin-inline-end: 5%;
+            }
+        }
+
+
+        .input-title {
+            color: #000;
+            font-family: 'Raleway', sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 18px;
+            text-align: left;
+            display: block;
+            margin-block-end:5px ;
+          }
+        
+          .input-field {
+            border-radius: 8px;
+            border: 1px solid #D7D7D7;
+            background: #FFF;
+            box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08);
+            width: 100%;
+            height: 48px;
+            margin-bottom: 20px;
+            padding: 10px;
+            font-size: 16px;
+            font-family: 'Raleway', sans-serif;
+          }
+
+          .input-field::placeholder {
+            color: rgba(43, 43, 43, 0.50);
+            font-family: 'Raleway', sans-serif;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 25.5px;
+          }
+
+          button{
+            display: flex;
+            width: 100%;
+            padding: 12px 24px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            background: #002237;
+            box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08);
+            color: #FFF;
+            border: none;
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 150%; /* 24px */
+        }
+
+    }
+
+    .last-text{
+        margin-inline-start: auto;
+        margin-block-start: 12px;
+
+        &.sign-in{
+            margin-inline-start: 0;
+            margin-block-start: 24px;
+
+        }
+    }
+
+    a{
+        text-decoration: none;
+        color: $white;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 150%; /* 24px */
+    }
+
+}

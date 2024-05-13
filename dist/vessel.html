@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      content="width=device-width, height=device-height, initial-scale=1.0, viewport-fit=cover"
+      name="viewport"
+    />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <meta content="content" name="description" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="mobile-web-app-capable" />
+    <meta content="yes" name="mobile-web-app-capable" />
+    <link href="imgs/fav.png" rel="icon" sizes="16x16" type="image/png" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap">
+    <title>chemProp</title>
+    <!-- Preload asset files-->
+    <link as="style" href="css/main.min.css" rel="prefetch" />
+<!-- start styles.html-->
+<!-- Icons CSS-->
+<link href="css/fontawesome.min.css" rel="stylesheet" type="text/css">
+<!-- Main CSS-->
+<link href="css/main.min.css" rel="stylesheet" type="text/css">
+
+<!-- Add Bootstrap Datepicker CSS -->
+<link rel="stylesheet" href="plugins/bootstrap-datepicker/bootstrap-datepicker.min.css">
+
+
+
+<!-- end styles.html-->
+<!-- start style -->
+
+
+<!-- end style -->
+  </head>
+  <body>
+    <!--<div class="preloader" id="preloader-logo">-->
+    <!--    <div class="loader">-->
+    <!--        <div class="loader-logo"><img alt="logo" src="imgs/logo.svg"></div>-->
+    <!--        <div class="loader-figure"></div>-->
+    <!--    </div>-->
+    <!--</div>-->
+
+    
+    
+<!-- start header.html-->
+<header class="site-header ">
+
+  <nav class="navbar p-0 navbar-expand-lg navbar-dark fixed-top">
+    <div class="container-fluid p-0">
+      <a class="navbar-brand" href="#">
+        <img class="logo" src="../../../imgs/home/chempro-logo.svg" alt="Logo">
+        <!-- Replace 'logo.png' with the path to your logo image -->
+      </a>
+      <button class="navbar-toggler navbar-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active  " id="homeNavItem">
+            <a class="nav-link" href="index">Home</a>
+          </li>
+          <li class="nav-item" id="unitsNavItem">
+            <a class="nav-link" href="units">Units</a>
+          </li>
+          <li class="nav-item" id="contactExpertNavItem">
+            <a class="nav-link" href="post">Q/A</a>
+            <!-- <a class="nav-link" href="../../contact_expert.html">Contact Expert</a> -->
+          </li>
+          <li class="nav-item" id="contactUsNavItem">
+            <a class="nav-link" href="contact_us">Contact us</a>
+          </li>
+          <li class="nav-item log-in-out-buttons active" id="loginButton">
+            <a class="nav-link" href="sign_in">LOG IN</a>
+          </li>
+          <li class="nav-item log-in-out-buttons active" id="logoutButton" style="display: none;">
+            <a class="nav-link" href="logout">LOG OUT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      fetch('/check-login')
+        .then(response => response.json())
+        .then(data => {
+          if (data.loggedIn) {
+            document.getElementById('loginButton').style.display = 'none';
+            document.getElementById('logoutButton').style.display = '';
+          } else {
+            document.getElementById('loginButton').style.display = '';
+            document.getElementById('logoutButton').style.display = 'none';
+          }
+        })
+        .catch(error => console.error('Error checking login status:', error));
+    });
+  </script>
+
+</header>
+<!-- end header.html-->
+    <div id="site-content">
+<!-- start template-content -->
+<!-- this is styled in units.scss for all units pages  -->
+  
+<div class="vessel-frist-container">
+  <div class="main-text-container">
+    <div class="text-container">
+      <span class="first-part">Welcome to... &nbsp; </span>
+      <span class="second-part"> our... <br> Vessel unit</span>
+    </div>
+  </div>
+</div>
+  
+<div class="vessel-main-content-container">
+
+  <p class="header-1 first">Vessel unit</p>
+    <div class="definition-main-container">
+        <div class="definition-container">
+            <p class="definition-text">A storage vessel serves as a critical component within the infrastructure of a chemical plant, providing a secure and controlled environment for the containment and preservation of a wide range of substances, including chemicals, raw materials, intermediates, and finished products. Its primary function revolves around safely housing these substances, ensuring their integrity, stability, and availability as needed for the plant's operations. Storage vessels come in diverse shapes, sizes, and materials, tailored to accommodate the specific properties and requirements of the substances they hold.</p>
+        </div>
+    </div>
+
+
+  <p class="header-1">personal protective equipments</p>
+  <!-- inline-padding-ppe-container this is styled in the general scss file  -->
+    <div class="inline-padding-ppe-container">
+      <div class="general-ppe-cards-container d-flex continer-fluid">
+          <!-- cards will be styled in cards.scss file  -->
+          <div class="ppe-card">
+              <div class="img-container d-flex">
+                  <img class="card-image" src="../imgs/units/PPE_equipments/goggles-with-side-shileds.png" alt="">
+              </div>
+              <p class="card-text">Safety glasses with side shields:</p>
+              <p class="card-text purpess">flying particles; molten metal; hazardous, acidic, or caustic liquids.</p>
+          </div>
+
+          <div class="ppe-card even-numbers">
+              <div class="img-container d-flex">
+                  <img class="card-image" src="../imgs/units/PPE_equipments/gloves.png" alt="">
+              </div>
+              <p class="card-text">Neoprene, nitrile, vinyl and rubber gloves:</p>
+              <p class="card-text purpess"> protect against liquid and chemical hazards, but each material is only rated to protect against certain types of chemicals.</p>
+          </div>
+
+          <div class="ppe-card third">
+              <div class="img-container d-flex">
+                  <img class="card-image" src="../imgs/units/PPE_equipments/Respiratory.png" alt="">
+              </div>
+              <p class="card-text">Respiratory:</p>
+              <p class="card-text purpess">to prevent vapors from entering the respiratory system.</p>
+          </div>
+
+          <div class="ppe-card even-numbers">
+              <div class="img-container d-flex">
+                  <img class="card-image small" src="../imgs/units/PPE_equipments/rubber-boots.png" alt="">
+              </div>
+              <p class="card-text">Rubber boots:</p>
+              <p class="card-text purpess">prevent from corrosion.</p>
+          </div>
+
+          <div class="ppe-card">
+              <div class="img-container d-flex">
+                  <img class="card-image" src="../imgs/units/PPE_equipments/chemical-suit.png" alt="">
+              </div>
+              <p class="card-text">Chemical-resistant suit:</p>
+              <p class="card-text purpess">prevent from corrosion.</p>
+          </div>
+
+
+      </div>
+    </div>
+
+  <p class="header-1 vessel-table-title">In case of a hydrochloric spill in the vessel</p>
+  <div class="inline-padding-ppe-container">
+    <div class="table-container">
+        <div class="table-part">
+            <div class="title first">Volume of Hydrochloric Acid Spill (gallons)</div>
+            <div class="h-separator"></div>
+            <div class="text-content">1</div>
+            <div class="h-separator"></div>
+            <div class="text-content">2</div>
+            <div class="h-separator"></div>
+            <div class="text-content">3</div>
+            <div class="h-separator"></div>
+            <div class="text-content">4</div>
+            <div class="h-separator"></div>
+            <div class="text-content">5</div>
+            <div class="h-separator"></div>
+            <div class="text-content">10</div>
+            <div class="h-separator"></div>
+            <div class="text-content">50</div>
+            <div class="h-separator"></div>
+            <div class="text-content">55</div> 
+            <div class="h-separator"></div>
+            <div class="text-content">100</div>                 
+        </div>
+        <div class="v-separator"></div>
+        <div class="table-part">
+            <div class="title second">Amount of Sodium Bicarbonate Needed (lbs)</div>
+            <div class="h-separator"></div>
+            <div class="text-content white">5.5</div>
+            <div class="h-separator"></div>
+            <div class="text-content white">11</div>
+            <div class="h-separator"></div>
+            <div class="text-content white">16.5</div>
+            <div class="h-separator"></div>
+            <div class="text-content white">22</div>
+            <div class="h-separator"></div>
+            <div class="text-content white">27.5</div>
+            <div class="h-separator"></div>
+            <div class="text-content white">55</div>
+            <div class="h-separator"></div>
+            <div class="text-content white">275</div>    
+            <div class="h-separator"></div>
+            <div class="text-content white">302.5</div>  
+            <div class="h-separator"></div>
+            <div class="text-content white">550</div>  
+        </div>
+        
+    </div>
+  </div>
+
+
+
+
+</div>
+
+  
+  
+  
+
+<!-- end template-content -->
+    </div>
+<!-- start footer.html-->
+<footer class="footer_continer ">
+    <div class="container-fluid">
+        
+      
+    </div>
+</footer>
+<!-- end footer.html-->
+    
+
+    <!-- ==============================================================-->
+    <!-- All Jquery-->
+    <!-- ==============================================================-->
+<!-- start scripts.html-->
+<script src="plugins/jquery-3.7.0.min.js" type="text/javascript"></script>
+<!-- Bootstrap popper Core JavaScript-->
+<script src="plugins/bootstrap/bootstrap.bundle.min.js" type="text/javascript"></script>
+
+<script src="js/app.min.js"></script>
+
+
+
+<!-- Add Bootstrap Datepicker JS -->
+<script src="plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+
+<!-- end scripts.html-->
+<!-- start js -->
+
+
+<!-- end js -->
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+
+</html>

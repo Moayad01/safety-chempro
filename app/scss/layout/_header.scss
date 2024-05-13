@@ -1,0 +1,119 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.navbar {
+  transition: background-color 0.5s ease; /* Smooth transition effect */
+  background-color: rgba(0, 0, 0, 0); /* Transparent background initially */
+  border-radius: 0 0px 77px 77px;
+
+  @media (max-width: 992px) {
+    background-color: rgba(0, 0, 0, 0.7)
+  }
+
+
+  .logo{
+    width: 233.393px;
+    height: 113px;
+    margin-block-start: 1px;
+    margin-inline-start: 10px
+  }
+
+  .navbar-nav {
+    margin-inline-start: auto; /* Push links to the right */
+    padding-block-end: 50px;
+    margin-inline-end: 30px;
+
+    .nav-item{
+      margin-inline-start: 15px;
+      border-radius: 44px;
+      padding-inline: 7.5px;
+      @media (max-width: 992px) {
+        margin-block: 4px;
+      }
+
+
+      .nav-link {
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        color: #fff ; /* White color for the text */
+        
+        @media (max-width: 1101px) {
+          font-size: 14px;
+        }
+        @media (max-width: 1049px) {
+          font-size: 13px;
+        }
+        @media (max-width: 1022px) {
+          font-size: 12px;
+        }
+        @media (max-width: 996px) {
+          font-size: 11px;
+        }
+        @media (max-width: 991px) {
+          font-size: 16px;
+          padding-inline: 30px;
+        }
+
+      }
+
+      &.active{
+        background-color: #fff;
+        .nav-link{
+          color: $primary;
+          padding-inline: 30px;
+        }
+      }
+  
+      &.log-in-out-buttons{
+        display: none;
+        border-radius: 19px;
+        background: rgba(0, 0, 0, 0.32);
+        padding-inline: 20px;
+        margin-inline-start: 15px;
+
+        @media (max-width: 992px) {
+          background: rgba(255, 0, 0, 0.2);
+          width: 160px;
+        }
+  
+        &.active{
+          display: block;
+          .nav-link{
+            color: #fff;
+          }
+        }
+      }
+
+    }
+
+  }
+
+
+  .nav-item:hover{
+    background-color: #fff;
+      .nav-link{
+        color: $primary;
+        //padding-inline: 30px;
+      }
+  }
+  
+  
+
+}
+.navbar-scrolled {
+  background-color: rgba(0, 0, 0, 0.5) !important; /* Change to transparent black background color on scroll */
+
+  @media (max-width: 992px) {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+  }
+}
+
+.navbar-button{
+  margin-inline-end: 28px;
+  border: solid 2px white !important;
+}
+

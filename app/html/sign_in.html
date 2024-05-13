@@ -1,0 +1,85 @@
+<!-- @@master  = templates/sign_in_up_template.html { "body_class" : "" } -->
+
+<!-- @@block  =   template-content -->
+
+<div class="sign_up_in_main_container">
+
+    <div class="form-continer">
+        <p class="heading">Welcome back</p>
+        <p class="sub-heading sign_in">Please enter your contact details to sign in.</p>
+
+        <!-- Error Message Container -->
+        <div id="errorMessage" style="color: red; margin-bottom: 15px;"></div>
+
+
+        <form id="myForm" action="/signin" method="POST">
+            <label for="" class="input-title">Email Address</label>
+            <input type="email" id="email" name="email" class="input-field" placeholder="Enter your email address"
+                title="Email should be in a valid format, e.g., user@example.com.">
+
+            <label for="" class="input-title">Password</label>
+            <input type="password" id="password" name="password" class="input-field" placeholder="Enter your password"
+                title="Password must be at least 8 characters, including 1 uppercase letter, 1 lowercase letter, and 1 number.">
+
+            <button type="submit" class="submit-button">Sign in</button>
+
+        </form>
+        <script>
+            document.getElementById('myForm').addEventListener('submit', function (event) {
+                let isValid = true;
+                let messages = [];
+
+                const email = escapeHTML(document.getElementById('email').value);
+                if (!/\S+@\S+\.\S+/.test(email)) {
+                    isValid = false;
+                    messages.push('Email address is invalid.');
+                }
+
+                const password = escapeHTML(document.getElementById('password').value);
+                if (!/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/.test(password)) {
+                    isValid = false;
+                    messages.push('Password does not meet the required conditions.');
+                }
+
+                if (!isValid) {
+                    event.preventDefault(); // Stop form submission
+                    alert(messages.join('\n'));
+                }
+            });
+
+            function escapeHTML(str) {
+                return str.replace(/[&<>"']/g, function (match) {
+                    return {
+                        '&': '&amp;',
+                        '<': '&lt;',
+                        '>': '&gt;',
+                        '"': '&quot;',
+                        "'": '&#39;'
+                    }[match];
+                });
+            }
+
+        </script>
+
+        <p class="last-text sign-in">Don’t have an account ? &nbsp<a href="/sign_up.html"> Sign up form here </a></p>
+
+    </div>
+
+
+</div>
+
+<script>
+    window.onload = function () {
+        // Parse the URL query parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const error = urlParams.get('error');
+        if (error) {
+            // Display the error message
+            document.getElementById('errorMessage').textContent = decodeURIComponent(error);
+        }
+    };
+</script>
+
+
+
+<!-- @@close-->

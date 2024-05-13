@@ -1,0 +1,213 @@
+<!-- @@master  = templates/template_home.html { "body_class" : "" } -->
+
+<!-- @@block  =   template-content -->
+
+<!-- this is styled in units.scss for all units pages  -->
+
+
+<style>
+ /* Modal styling */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Dim background */
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  margin: 10% auto; /* 10% from the top and centered */
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  width: 50%; /* Responsive width */
+  animation: modalOpen 0.4s ease-out;
+}
+
+@keyframes modalOpen {
+  from {
+    top: -50px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #666;
+}
+
+.modal-close:hover {
+  color: #000;
+}
+
+.modal-message {
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+}
+
+.success {
+  border-left: 5px solid green; /* Left border for success */
+}
+
+.failure {
+  border-left: 5px solid red; /* Left border for failure */
+}
+
+</style>
+
+<div class="ctwo-separation-frist-container">
+  <div class="main-text-container">
+    <div class="text-container">
+      <span class="first-part">Welcome to... </span>
+      <span class="second-part"> our C2 separation system</span>
+    </div>
+  </div>
+</div>
+
+<div class="ctwo-separation-main-content-container" >
+  <div class="img-and-inputs-container" >
+    <img class="calculator-img" src="../imgs/units/calculator/calculator-chart.png" alt="">
+    
+    
+    <div class="F-input-container">
+      <div class="F-text calculator-text-style">
+        <p>Saturated liquid</p>
+        <p>C2H4  = 0.85 mol</p>
+      </div>
+      <label class="calculator-text-style" for="fInput">F:</label>
+      <input class="c2-calculator-input"
+        type="number" id="fInput">
+    </div>
+
+
+    <div class="P-input-container" >
+      <label class="calculator-text-style" for="pInput">P:</label>
+      <input class="c2-calculator-input"
+        type="number" id="pInput">
+      <label class="calculator-text-style">bar</label>
+    </div>
+
+
+    <div class="T-input-container" >
+      <label class="calculator-text-style" for="tInput">T:</label>
+      <input class="c2-calculator-input"
+        type="number" id="tInput">
+        <label class="calculator-text-style" for="">°C</label>
+    </div>
+
+
+    <div class="D-input-container">
+      <label class="calculator-text-style" for="dInput">D:</label>
+      <input class="c2-calculator-input"
+        type="number" id="dInput">
+      <label class="calculator-text-style" for="dInput">Kmol/h</label>
+    </div>
+    <p class="D-text calculator-text-style"> C2H4 = 0.99 mol</p>
+
+
+    <div class="B-input-container">
+      <label class="calculator-text-style" for="bInput">B:</label>
+      <input class="c2-calculator-input"
+        type="number" id="bInput">
+    </div>
+
+
+    <div class="XB-input-container">
+      <label class="calculator-text-style" for="xbInput">XB:</label>
+      <input class="c2-calculator-input"
+        type="number" id="xbInput">
+    </div>
+
+
+    <div class="U_flood-input-container">
+      <label class="calculator-text-style" for="ufloodInput">U flood:</label>
+      <input class="c2-calculator-input"
+        type="number" id="ufloodInput">
+      <label class="calculator-text-style" for="ufloodInput">m/s</label>
+    </div>
+
+
+    <div class="U_top-input-container">
+      <label class="calculator-text-style" for="utopInput">U top:</label>
+      <input class="c2-calculator-input"
+        type="number" id="utopInput">
+      <label class="calculator-text-style" for="utopInput">m/s</label>
+    </div>
+
+
+    <div class="R-input-container">
+      <label class="calculator-text-style" for="rInput">R:</label>
+      <input class="c2-calculator-input"
+        type="number" id="rInput">
+    </div>
+
+
+    <div class="P_tower-input-container">
+      <label class="calculator-text-style" for="ptowerInput">P tower:</label>
+      <input class="c2-calculator-input"
+        type="number" id="ptowerInput" aria-describedby="ptowerError">
+      <div id="ptowerError" style="color: red; display: none; font-size: 12px; margin-top: 4px;"></div>
+      <label class="calculator-text-style" for="ptowerInput">bar</label>
+    </div>
+
+    
+    <div class="V-input-container" >
+      <label class="calculator-text-style" for="vInput">V:</label>
+      <input class="c2-calculator-input"
+        type="number" id="vInput">
+      <label class="calculator-text-style" for="vInput">Kmol/h</label>
+    </div>
+
+
+    <div class="d-flex clearButton">
+      <button class="C2clearButton" id="C2clearButton">
+        clear all inputs</button>
+        <div class="buttons-padding" ></div>
+      <button class="check-safety C2clearButton" id="C2CheckSafety">
+      check safety status</button>
+    </div>
+
+    <div class="pump-detector" onclick="navigateToPump()"></div>
+
+    <div class="condenser-detector" onclick="navigateToCondenser()"></div>
+
+    <div class="compresser-hint">
+
+    </div>
+  </div>
+
+
+<!-- Modal structure -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="modal-close" onclick="closeModal()">&times;</span>
+    <p id="modalMessage"></p>
+  </div>
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+<!-- @@close-->

@@ -1,0 +1,26 @@
+
+
+@font-face {
+    font-family: ca-regular;
+    src: url(Cairo-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: ca-medium;
+    src: url(Cairo-Medium.ttf);
+    font-weight: 500;
+}
+
+
+@font-face {
+    font-family: ca-s-bold;
+    src: url(Cairo-SemiBold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: ca-bold;
+    src: url(Cairo-Bold.ttf);
+    font-weight: 700;
+}

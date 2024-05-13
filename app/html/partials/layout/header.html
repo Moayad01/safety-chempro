@@ -1,0 +1,56 @@
+<header class="site-header ">
+
+  <nav class="navbar p-0 navbar-expand-lg navbar-dark fixed-top">
+    <div class="container-fluid p-0">
+      <a class="navbar-brand" href="#">
+        <img class="logo" src="../../../imgs/home/chempro-logo.svg" alt="Logo">
+        <!-- Replace 'logo.png' with the path to your logo image -->
+      </a>
+      <button class="navbar-toggler navbar-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active  " id="homeNavItem">
+            <a class="nav-link" href="index">Home</a>
+          </li>
+          <li class="nav-item" id="unitsNavItem">
+            <a class="nav-link" href="units">Units</a>
+          </li>
+          <li class="nav-item" id="contactExpertNavItem">
+            <a class="nav-link" href="post">Q/A</a>
+            <!-- <a class="nav-link" href="../../contact_expert.html">Contact Expert</a> -->
+          </li>
+          <li class="nav-item" id="contactUsNavItem">
+            <a class="nav-link" href="contact_us">Contact us</a>
+          </li>
+          <li class="nav-item log-in-out-buttons active" id="loginButton">
+            <a class="nav-link" href="sign_in">LOG IN</a>
+          </li>
+          <li class="nav-item log-in-out-buttons active" id="logoutButton" style="display: none;">
+            <a class="nav-link" href="logout">LOG OUT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      fetch('/check-login')
+        .then(response => response.json())
+        .then(data => {
+          if (data.loggedIn) {
+            document.getElementById('loginButton').style.display = 'none';
+            document.getElementById('logoutButton').style.display = '';
+          } else {
+            document.getElementById('loginButton').style.display = '';
+            document.getElementById('logoutButton').style.display = 'none';
+          }
+        })
+        .catch(error => console.error('Error checking login status:', error));
+    });
+  </script>
+
+</header>

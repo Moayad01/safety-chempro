@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      content="width=device-width, height=device-height, initial-scale=1.0, viewport-fit=cover"
+      name="viewport"
+    />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <meta content="content" name="description" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="mobile-web-app-capable" />
+    <meta content="yes" name="mobile-web-app-capable" />
+    <link href="imgs/fav.png" rel="icon" sizes="16x16" type="image/png" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap">
+    <title>chemProp</title>
+    <!-- Preload asset files-->
+    <link as="style" href="css/main.min.css" rel="prefetch" />
+<!-- start styles.html-->
+<!-- Icons CSS-->
+<link href="css/fontawesome.min.css" rel="stylesheet" type="text/css">
+<!-- Main CSS-->
+<link href="css/main.min.css" rel="stylesheet" type="text/css">
+
+<!-- Add Bootstrap Datepicker CSS -->
+<link rel="stylesheet" href="plugins/bootstrap-datepicker/bootstrap-datepicker.min.css">
+
+
+
+<!-- end styles.html-->
+<!-- start style -->
+
+
+<!-- end style -->
+  </head>
+  <body>
+    <!--<div class="preloader" id="preloader-logo">-->
+    <!--    <div class="loader">-->
+    <!--        <div class="loader-logo"><img alt="logo" src="imgs/logo.svg"></div>-->
+    <!--        <div class="loader-figure"></div>-->
+    <!--    </div>-->
+    <!--</div>-->
+
+    
+    
+<!-- start header.html-->
+<header class="site-header ">
+
+  <nav class="navbar p-0 navbar-expand-lg navbar-dark fixed-top">
+    <div class="container-fluid p-0">
+      <a class="navbar-brand" href="#">
+        <img class="logo" src="../../../imgs/home/chempro-logo.svg" alt="Logo">
+        <!-- Replace 'logo.png' with the path to your logo image -->
+      </a>
+      <button class="navbar-toggler navbar-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active  " id="homeNavItem">
+            <a class="nav-link" href="index">Home</a>
+          </li>
+          <li class="nav-item" id="unitsNavItem">
+            <a class="nav-link" href="units">Units</a>
+          </li>
+          <li class="nav-item" id="contactExpertNavItem">
+            <a class="nav-link" href="post">Q/A</a>
+            <!-- <a class="nav-link" href="../../contact_expert.html">Contact Expert</a> -->
+          </li>
+          <li class="nav-item" id="contactUsNavItem">
+            <a class="nav-link" href="contact_us">Contact us</a>
+          </li>
+          <li class="nav-item log-in-out-buttons active" id="loginButton">
+            <a class="nav-link" href="sign_in">LOG IN</a>
+          </li>
+          <li class="nav-item log-in-out-buttons active" id="logoutButton" style="display: none;">
+            <a class="nav-link" href="logout">LOG OUT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      fetch('/check-login')
+        .then(response => response.json())
+        .then(data => {
+          if (data.loggedIn) {
+            document.getElementById('loginButton').style.display = 'none';
+            document.getElementById('logoutButton').style.display = '';
+          } else {
+            document.getElementById('loginButton').style.display = '';
+            document.getElementById('logoutButton').style.display = 'none';
+          }
+        })
+        .catch(error => console.error('Error checking login status:', error));
+    });
+  </script>
+
+</header>
+<!-- end header.html-->
+    <div id="site-content">
+<!-- start template-content -->
+<div class="post_first_contriner">
+    <div class="search-container">
+
+
+        <div class="search-question-boxes">
+            <p class="input-title">Do you have a question in maind ? Search for it</p>
+            <form id="searchForm" action="/searchPosts" method="GET">
+                <input type="text" class="search-new-question-inputs" name="topic"
+                    placeholder="Search for a question...">
+                <button type="submit" class="input-button">
+                    <svg class="button-icon" width="57" height="56" viewBox="0 0 57 56" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M46.3434 6.60051C45.9928 6.48366 45.9928 5.98862 46.3434 5.87177L48.4013 5.18659C48.8537 5.03577 49.2647 4.78167 49.6018 4.44442C49.9389 4.10717 50.1928 3.69605 50.3434 3.24363L51.0286 1.18702C51.1455 0.836456 51.6406 0.836456 51.7575 1.18702L52.4427 3.2447C52.5936 3.69703 52.8477 4.10801 53.185 4.44508C53.5223 4.78214 53.9334 5.03602 54.3859 5.18659L56.4427 5.87177C56.5195 5.89696 56.5864 5.94576 56.6338 6.01119C56.6812 6.07662 56.7067 6.15535 56.7067 6.23614C56.7067 6.31693 56.6812 6.39566 56.6338 6.46109C56.5864 6.52652 56.5195 6.57532 56.4427 6.60051L54.3848 7.2857C53.9326 7.43641 53.5216 7.69035 53.1845 8.0274C52.8474 8.36446 52.5934 8.77537 52.4427 9.22758L51.7575 11.2853C51.7323 11.362 51.6835 11.4289 51.618 11.4763C51.5526 11.5237 51.4739 11.5492 51.393 11.5492C51.3122 11.5492 51.2335 11.5237 51.1681 11.4763C51.1026 11.4289 51.0538 11.362 51.0286 11.2853L50.3434 9.22758C50.1926 8.77537 49.9387 8.36446 49.6016 8.0274C49.2645 7.69035 48.8535 7.43641 48.4013 7.2857L46.3434 6.60051ZM40.9261 10.7042C40.8801 10.689 40.84 10.6596 40.8117 10.6203C40.7833 10.581 40.768 10.5338 40.768 10.4854C40.768 10.4369 40.7833 10.3897 40.8117 10.3504C40.84 10.3111 40.8801 10.2818 40.9261 10.2665L42.1606 9.85541C42.7109 9.67163 43.1423 9.24033 43.3261 8.69006L43.7372 7.45566C43.7525 7.40966 43.7818 7.36963 43.8211 7.34125C43.8604 7.31288 43.9076 7.29761 43.9561 7.29761C44.0046 7.29761 44.0518 7.31288 44.0911 7.34125C44.1304 7.36963 44.1597 7.40966 44.175 7.45566L44.5861 8.69006C44.6765 8.96145 44.8289 9.20805 45.0312 9.41033C45.2335 9.6126 45.4802 9.76499 45.7516 9.85541L46.9861 10.2665C47.0321 10.2818 47.0722 10.3111 47.1006 10.3504C47.1289 10.3897 47.1442 10.4369 47.1442 10.4854C47.1442 10.5338 47.1289 10.581 47.1006 10.6203C47.0722 10.6596 47.0321 10.689 46.9861 10.7042L45.7516 11.1153C45.4802 11.2057 45.2335 11.3581 45.0312 11.5604C44.8289 11.7626 44.6765 12.0093 44.5861 12.2806L44.175 13.515C44.1597 13.561 44.1304 13.6011 44.0911 13.6294C44.0518 13.6578 44.0046 13.6731 43.9561 13.6731C43.9076 13.6731 43.8604 13.6578 43.8211 13.6294C43.7818 13.6011 43.7525 13.561 43.7372 13.515L43.3261 12.2806C43.2357 12.0093 43.0833 11.7626 42.881 11.5604C42.6787 11.3581 42.432 11.2057 42.1606 11.1153L40.9261 10.7042ZM39.8116 3.19477C39.7813 3.18428 39.7551 3.16463 39.7365 3.13855C39.718 3.11247 39.708 3.08125 39.708 3.04923C39.708 3.01722 39.718 2.986 39.7365 2.95992C39.7551 2.93384 39.7813 2.91418 39.8116 2.9037L40.6339 2.62962C41.0015 2.50746 41.2894 2.21958 41.4116 1.85202L41.6857 1.0298C41.6962 0.99955 41.7158 0.973319 41.7419 0.954757C41.768 0.936193 41.7992 0.926219 41.8313 0.926219C41.8633 0.926219 41.8945 0.936193 41.9206 0.954757C41.9467 0.973319 41.9663 0.99955 41.9768 1.0298L42.2509 1.85202C42.3112 2.03315 42.4128 2.19775 42.5478 2.33273C42.6828 2.46771 42.8475 2.56937 43.0286 2.62962L43.8509 2.9037C43.8812 2.91418 43.9074 2.93384 43.926 2.95992C43.9445 2.986 43.9545 3.01722 43.9545 3.04923C43.9545 3.08125 43.9445 3.11247 43.926 3.13855C43.9074 3.16463 43.8812 3.18428 43.8509 3.19477L43.0286 3.46884C42.8475 3.5291 42.6828 3.63076 42.5478 3.76574C42.4128 3.90072 42.3112 4.06531 42.2509 4.24645L41.9768 5.06761C41.9663 5.09786 41.9467 5.12409 41.9206 5.14265C41.8945 5.16121 41.8633 5.17119 41.8313 5.17119C41.7992 5.17119 41.768 5.16121 41.7419 5.14265C41.7158 5.12409 41.6962 5.09786 41.6857 5.06761L41.4116 4.24539C41.2894 3.87783 41.0015 3.58995 40.6339 3.46778L39.8116 3.19477Z"
+                            fill="white" />
+                        <path
+                            d="M49.9888 50.1157L38.621 38.3625C41.3578 34.5955 42.8353 30.0103 42.8303 25.2989C42.8303 13.2647 33.3605 3.47388 21.7208 3.47388C10.0811 3.47388 0.611328 13.2647 0.611328 25.2989C0.611328 37.3332 10.0811 47.124 21.7208 47.124C26.2777 47.1292 30.7126 45.6016 34.3561 42.772L45.7239 54.5252C46.2994 55.057 47.0499 55.3409 47.8214 55.3186C48.5929 55.2963 49.3269 54.9694 49.8727 54.4051C50.4185 53.8409 50.7346 53.082 50.7562 52.2843C50.7778 51.4866 50.5032 50.7107 49.9888 50.1157ZM6.64261 25.2989C6.64261 22.2157 7.52693 19.2016 9.18375 16.638C10.8406 14.0743 13.1955 12.0762 15.9506 10.8963C18.7058 9.71636 21.7375 9.40764 24.6624 10.0092C27.5873 10.6107 30.274 12.0954 32.3827 14.2756C34.4914 16.4558 35.9275 19.2336 36.5093 22.2576C37.0911 25.2816 36.7925 28.4161 35.6513 31.2647C34.51 34.1133 32.5774 36.548 30.0978 38.261C27.6182 39.974 24.703 40.8883 21.7208 40.8883C17.7233 40.8833 13.8909 39.2393 11.0642 36.3168C8.23754 33.3943 6.64741 29.432 6.64261 25.2989Z"
+                            fill="white" />
+                    </svg>
+                </button>
+            </form>
+        </div>
+
+
+
+        <div class="search-question-boxes">
+            <p class="input-title">Did not find an answer ??.. &nbsp; post your question...</p>
+            <form id="newQuestionForm" action="/createPost" method="POST">
+                <input type="text" class="search-new-question-inputs" name="message"
+                    placeholder="post a new question..." id="messageInput">
+                <button type="submit" id="postQuestion" class="input-button">
+                    <img class="button-icon" src="../imgs/post/arrow.png" alt="">
+                </button>
+            </form>
+        </div>
+
+
+
+
+        <!-- <div class="discussion">
+            <div class="question">
+            </div>
+            <div class="answer">
+                <input class="post-comment-input" type="text" placeholder="write a new answer from here...">
+                <button class="post-comment-button">
+                    <img class="button-icon" src="../imgs/post/arrow.png" alt="">
+                </button>
+            </div>
+        </div>
+ -->
+        <div id="searchResults" class="search-results"></div>
+
+
+
+    </div>
+</div>
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('searchForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            initiateSearch();
+        });
+
+        document.body.addEventListener('submit', function (event) {
+            if (event.target.classList.contains('answer-form')) {
+                event.preventDefault();
+                submitResponse(event, event.target);
+            }
+        });
+    });
+
+    function initiateSearch(topic = null) {
+        const inputField = document.querySelector('input[name="topic"]');
+        const topicQuery = topic || inputField.value;
+        fetch(`/searchPosts?topic=${encodeURIComponent(topicQuery)}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                displayPosts(data.posts);
+            })
+            .catch(error => {
+                console.error('Error fetching posts:', error);
+                displayPosts([]);
+            });
+    }
+
+    function submitResponse(event, form) {
+        event.preventDefault(); // Ensure default form submission is stopped
+        const formData = new FormData(form);
+        fetch(form.action, {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Network response was not ok: ${response.statusText}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log("Data received from server:", data);
+                displayPosts(data.posts);
+                const messageValue = form.querySelector('.question p').textContent;
+                triggerSearch(messageValue);
+            })
+            .catch(error => {
+                console.error('Error posting response:', error);
+            });
+    }
+
+    function triggerSearch(query) {
+        // Update this to perform an AJAX search instead of submitting the form
+        initiateSearch(query);
+    }
+
+    function displayPosts(posts) {
+        const searchResultsContainer = document.getElementById('searchResults');
+        searchResultsContainer.innerHTML = '';
+
+        if (posts && posts.length > 0) {
+            posts.forEach(post => {
+                const discussionDiv = document.createElement('div');
+                discussionDiv.className = 'discussion';
+                const form = document.createElement('form');
+                form.className = 'answer-form';
+                form.action = '/postResponse';
+                form.method = 'POST';
+                form.enctype = "multipart/form-data";
+                form.innerHTML = `
+                <div class="question">
+                    <input type="hidden" name="ID" value="${post.ID}">
+                    <p>${post.message}</p>
+                </div>
+                <div class="responses">
+                    ${post.responses.map(response => `<div class="response"><p>${response.response}</p></div>`).join('')}
+                </div>
+                <div class="answer">
+                    <input type="text" name="answer" placeholder="Post an answer here...">
+                    <button type="submit" class="response-button">
+                        <img class="response-icon" src="../imgs/post/arrow.png" alt="Submit">
+                    </button>
+
+                </div>
+            `;
+                discussionDiv.appendChild(form);
+                searchResultsContainer.appendChild(discussionDiv);
+            });
+        } else {
+            searchResultsContainer.innerHTML = '<p>No posts found.</p>';
+        }
+    }
+
+</script>
+
+
+<!-- end template-content -->
+    </div>
+<!-- start footer.html-->
+<footer class="footer_continer ">
+    <div class="container-fluid">
+        
+      
+    </div>
+</footer>
+<!-- end footer.html-->
+    
+
+    <!-- ==============================================================-->
+    <!-- All Jquery-->
+    <!-- ==============================================================-->
+<!-- start scripts.html-->
+<script src="plugins/jquery-3.7.0.min.js" type="text/javascript"></script>
+<!-- Bootstrap popper Core JavaScript-->
+<script src="plugins/bootstrap/bootstrap.bundle.min.js" type="text/javascript"></script>
+
+<script src="js/app.min.js"></script>
+
+
+
+<!-- Add Bootstrap Datepicker JS -->
+<script src="plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+
+<!-- end scripts.html-->
+<!-- start js -->
+
+
+<!-- end js -->
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+
+</html>

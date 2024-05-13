@@ -1,0 +1,95 @@
+// -----------------------------------------------------------------------------
+// This file contains all Sass variables.
+// -----------------------------------------------------------------------------
+//Fonts
+$text-font-stack: 'ca', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !important;
+;
+$text-font-secondary: 'ca';
+
+/// Code (monospace) font family
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+/// Relative or absolute URL where all assets are served from
+$base-url: '/assets/' !default;
+
+//Colors
+$primary: #153766;
+$secondary: #26306b;
+$red: #b51d1d;
+$link-hover: $secondary;
+$success: #068d7a;
+$danger: $red !default;
+// $info:          $cyan !default;
+// $warning:       $yellow !default;
+// $light:         $gray-100 !default;
+// $dark:          $gray-800 !default;
+
+// Text color
+$text-color-brand: $primary;
+$text-color-orange: #FFAA40 !default;
+
+$text-color-black: #000 !default;
+$text-color-white: #fff !default;
+$text-color-description:#B7B7B7 !default;
+$text-color-navy-blue: #153766 !default;
+$text-color-dark-grey: #545454 !default;
+$text-color-light-blue: #6780A1 !default;
+$text-color-place-holder: #8E8E8E !default;
+
+
+// background colors
+$bg-brand: $primary;
+$bg-secondary: $secondary;
+$bg-dark-blue: #26306b;
+$bg-grey: #eceff3;
+$bg-light-grey: #f3f6f7;
+$bg-color-dark-grey: #687983;
+$bg-color-red: $red;
+$bg-color-purple: #6034a5;
+$bg-color-dark-green: #068e7b;
+$bg-color-light-green: #98d134;
+
+
+
+
+//input colors
+//$input-focus-border-color: $primary;
+//$input-focus-color: $primary;
+//$input-focus-bg: $primary;
+//$input-focus-border-color: $primary;
+//$input-border-color: #d7d7d7;
+//$input-focus-color: $input-color !default;
+
+//
+//$border-color: #ededee;
+//// navs
+//$nav-tabs-link-active-color: $primary;
+//$nav-tabs-link-active-border-color: $bg-brand;
+//
+// Height
+$height-base: 38px;
+$height-header: 60px;
+$height-header-mobile: 55px;
+$height-footer: 46px;
+
+// Breakpoints map
+$breakpoints: (
+    'small': 320px,
+    'medium': 767px,
+    'large': 1023px,
+    'xlarge': 1199px,
+    'xxlarge': 1599px,
+    'xxxlarge': 1919px,
+) !default;
+
+//
+//// Width
+//$width-sidebar: 240px;
+
+//
+//$container-max-widths: (
+//    sm: 540px,
+//    md: 720px,
+//    lg: 960px,
+//    xl: 1280px
+//) !default;

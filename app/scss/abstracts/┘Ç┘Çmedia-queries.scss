@@ -1,0 +1,35 @@
+// -----------------------------------------------------------------------------
+// This file contains all media queries.
+// -----------------------------------------------------------------------------
+/* Responsive Style */
+
+// medium screen size (md) 'medium': 768px
+@include maxMedia(map-get($breakpoints, medium)) {
+}
+
+// small screen size (sm) 0 to small': 320px
+@include mediaBetween(0, map-get($breakpoints, small)) {
+}
+
+// large screen size between (md) 'medium': 768px and (lg) 'large': 1024px
+@include mediaBetween(map-get($breakpoints, medium) + 1, map-get($breakpoints, large)) {
+}
+
+/* ----------- iPad Pro ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-width: map-get($breakpoints, large) + 1) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+}
+
+// medium screen more than 1200px
+@include minMedia(map-get($breakpoints, xlarge)) {
+}
+
+// ipad pro
+/* Portrait */
+@media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
+}
+
+/* Landscape */
+// ipad pro
+@media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
+}

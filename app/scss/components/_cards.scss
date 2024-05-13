@@ -1,0 +1,103 @@
+
+
+
+
+// this is the style for the ppe card 
+
+.ppe-card{
+    border-radius: 20px;
+    background: linear-gradient(100deg, rgba(0, 0, 0, 0.10) 0%, rgba(255, 255, 255, 0.20) 100%);
+    box-shadow: 0px 4px 97px 16px #9AE1FC, 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    width: calc(33% - 20px);
+    height: 200px;
+    margin-inline-end: 30px;
+    margin-block-start: 30px;
+    padding: 20px;
+    height: auto;
+    min-height: 500px;
+
+    @media (max-width: 1100px) {
+        width: calc(50% - 15px);
+    } 
+    @media (max-width: 650px) {
+        width: 100%;
+        margin-inline-end: 0;
+    } 
+    @media (max-width: 650px) {
+        min-height: 450px;
+    } 
+    
+    
+
+    &.even-numbers{
+        @media (max-width: 1100px) {
+            margin-inline: 0;
+        } 
+    }
+
+    &.third{
+        margin-inline-end: 0;
+        
+        @media (max-width: 1100px) {
+            margin-inline-end: 30px;
+        } 
+        @media (max-width: 650px) {
+            margin-inline-end: 0;
+        } 
+    }
+
+    
+
+    .img-container{
+        justify-content: center;
+        height: 220px;
+        
+        .card-image{
+            width: 60%;
+            height: fit-content;
+            max-height: 210px;
+
+
+            &.small{
+                padding-block-start: 50px;
+            }
+        }
+    }
+
+    .card-text{
+        color: #FFAA40;
+        font-family: Poppins;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 170%; 
+        margin: 0;
+
+        @media (max-width: 650px) {
+            margin-block-start: 15px;
+        } 
+        @media (max-width: 475px) {
+            margin-block-start: 0;
+        } 
+        @media (max-width: 450px) {
+            font-size: 22px;
+        } 
+
+        &.purpess{
+            color: white;
+            padding-inline-start: 20px;
+            font-size: 21px;
+            @media (max-width: 650px) {
+                margin-block-start: 0;
+            } 
+            @media (max-width: 450px) {
+                font-size: 16px;
+            } 
+        }
+    }
+
+    
+}
+
+

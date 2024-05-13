@@ -1,0 +1,60 @@
+// 1. Configuration and helpers
+@import "abstracts/direction-rtl", "abstracts/variables", "abstracts/functions",
+"abstracts/mixins";
+
+$link-color: $primary !default;
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/variables";
+// 2. bootstrap
+// @import "../../node_modules/bootstrap/scss/variables";
+// 3. Base stuff
+@import "base/fonts", "base/typography", "base/helpers";
+// 4. util
+@import "partials/util/position";
+
+// 4. Layout-related sections
+@import "layout/background",
+"layout/header", "layout/footer", "layout/general";
+// 5. Components
+@import "components/heading", "components/page-title", "components/buttons",
+"components/select2", "components/_cards",
+//'partials/components/parsley',
+"components/nav";
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 6. Page-specific styles
+@import "pages/home";
+@import "pages/_contact_us";
+@import "pages/_sign_up_in";
+@import "pages/_units";
+@import "pages/_calculator";
+@import "pages/_post";
+@import "pages/_electric_room";
+@import "pages/_compressor";
+@import "pages/_reactors";
+@import "pages/_seperator";
+@import "pages/_vessel";
+@import "pages/_pump";
+@import "pages/_condenser";
+@import "pages/_general_safety_protocol";
+@import "pages/_quiz";
+@import "pages/_ppe_categories";
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+// 7. Themes
+@import "themes/default";
+// 8. media-queries
+@import "abstracts/media-queries";

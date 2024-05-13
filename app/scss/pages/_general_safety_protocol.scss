@@ -1,0 +1,247 @@
+.general-safety-protocol-room-frist-container{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: url('../../imgs/units/units-backgrounds/General-safety-protocol.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    top: auto;
+    justify-content: center; /* Horizontally center the div */
+    align-items: center;
+    display: flex;
+    justify-content: center; /* Horizontally center content in the div */
+    align-items: center; /* Vertically center content in the div */
+
+
+    .main-text-container{
+        width: 62.5%;
+        height: auto;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.45);
+        border-radius: 107px;
+        display: flex;
+        align-items: center;
+        padding-inline: 55px;
+        justify-self: center;
+        justify-content: center; /* Horizontally center text-container */
+        align-items: center; /* Vertically center text-container */
+        padding: 20px 55px; /* Consistent padding around the content */
+
+        @media (max-width: 745px) {
+            width: 73.5%;
+        }
+        @media (max-width: 633px) {
+            width: 85%;
+        }
+        @media (max-width: 485px) {
+            padding-inline: 25px;
+        }
+        @media (max-width: 400px) {
+            width: 92%;
+        }
+
+        .text-container {
+            font-family: Poppins;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            text-align: center;
+            padding-inline: inherit;
+            text-align: center; /* Centers the text inside text-container */
+
+            @media (max-width: 996px) {
+                padding-inline: 0px;
+            }
+            @media (max-width: 547px) {
+                font-size: 34px;
+            }
+            @media (max-width: 430px) {
+                font-size: 31px;
+            }
+        
+            .first-part {
+                color: #FFF;
+              }
+              
+              .second-part {
+                color: #FFAA40;
+              }
+        }
+
+    }
+
+}
+
+
+
+
+
+
+.general-safety-protocol-main-content-container{
+    padding-block: 100px;
+    padding-inline: 70px;
+    background-color: #002237;
+
+    @media (max-width: 800px) {
+        padding-block: 50px;
+        padding-inline: 30px;
+    } 
+    
+
+    .header-1{
+        font-family: Poppins;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        color: #FFAA40;
+    
+        &.first{
+            padding-block-end: 50px;
+        }
+
+        &.p-t-60{
+            padding-block-start: 60px;
+        }
+
+        @media (max-width: 1150px) {
+            margin-block-end: 0;
+        } 
+        @media (max-width: 1000px) {
+            font-size: 38px;
+            padding-inline-end: 20px;
+        } 
+        @media (max-width: 900px) {
+            font-size: 36px;
+        }
+        
+        @media (max-width: 700px) {
+            font-size: 33px;
+        }
+    
+        @media (max-width: 600px) {
+            font-size: 32px;
+        }
+        @media (max-width: 550px) {
+            font-size: 30px;
+        }
+        @media (max-width: 500px) {
+            font-size: 26px;
+        }
+    }
+
+    .header-2{
+        font-family: Poppins;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        color: #FFAA40;
+        padding-inline-start: 30px;
+        margin-bottom: 10px;
+
+        @media (max-width: 1000px) {
+            font-size: 28px;
+            padding-block-start: 20px;
+        }
+        @media (max-width: 900px) {
+            font-size: 26px;
+        }
+        @media (max-width: 700px) {
+            font-size: 24px;
+            margin: 0;
+        }
+        @media (max-width: 500px) {
+            padding-block-start: 10px;
+            padding-inline-start: 20px;
+        }
+
+        &.p-t-30{
+            padding-block-start: 30px;
+
+            @media (max-width: 1000px) {
+                padding-block-start: 20px;
+            } 
+            
+        }
+        &.p-t-60{
+            padding-block-start: 60px;
+        }
+
+        
+    }
+
+    .header-3{
+        font-family: Poppins;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        color: #FFF;
+        padding-inline-start: 10px;
+        padding-block-start: 10px;
+
+        @media (max-width: 1000px) {
+            font-size: 18px;
+        } 
+        @media (max-width: 900px) {
+            font-size: 16px;
+        }
+        @media (max-width: 700px) {
+            font-size: 14px;
+        }
+    }
+
+    .header-4{
+        font-family: Poppins;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        color: #FFF;
+        padding-inline-start: 60px;
+    }
+
+    .feature{
+        padding-inline-start: 105px;
+        color: #B7B7B7;
+        font-family: Poppins;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    ul {
+        content: '•';
+        color: #FFF;
+        padding-inline-start: 65px;
+
+        
+
+        li{
+            padding-block-end: 10px;
+
+        }
+
+        &.feature-title{
+            margin-block-end: 7px;
+            padding-inline-start: 80px;
+
+            @media (max-width: 500px) {
+                padding-inline-start: 48px;
+            }
+
+            li{
+                padding-block-end: 0;
+            }
+        }
+    }
+
+
+}
